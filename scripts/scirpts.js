@@ -1,25 +1,29 @@
-// GSAP Animations
-gsap.from(".hero-content", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
-gsap.from(".cta", { opacity: 0, y: 50, duration: 1, delay: 1 });
-
-// ScrollTrigger Animations
-gsap.utils.toArray(".about, .projects, .contact").forEach(section => {
-  gsap.from(section, {
-    scrollTrigger: {
-      trigger: section,
-      start: "top 80%",
-      toggleActions: "play none none none",
-    },
-    opacity: 0,
-    y: 50,
-    duration: 1,
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("nav a").forEach(anchor => {
+      anchor.addEventListener("click", function(event) {
+          event.preventDefault();
+          const section = document.querySelector(this.getAttribute("href"));
+          section.scrollIntoView({ behavior: "smooth" });
+      });
   });
-});
 
-// Hamburger Menu
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
+  document.querySelector("form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Thank you for your message! I'll get back to you soon.");
+      this.reset();
+  });
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+          }
+      });
+  }, { threshold: 0.3 });
+  
+  sections.forEach(section => {
+      observer.observe(section);
+  });
 });

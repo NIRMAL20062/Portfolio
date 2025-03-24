@@ -3,84 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script defer src="/scripts/scirpts.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">My Portfolio</div>
-            <ul class="nav-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
         </nav>
     </header>
+    
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm Nirmal passionate computer science student, programmer. I specialize in web development, AI-driven innovation. With expertise in Python and JavaScript, I love building projects that solve real-world problems. My goal? To push boundaries in tech and create impactful solutions.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project One</h3>
+            <p>Web Application to Compare Prices of Products</p>
+        </div>
+        <!-- <div class="project">
+            <h3>Project Two</h3>
+            <p>Short description of project two.</p>
+        </div> -->
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-        <section id="home" class="hero">
-            <div class="hero-content">
-              <h1>Welcome to My Portfolio</h1>
-              <p>I'm a passionate developer creating amazing web experiences.</p>
-              <a href="#projects" class="cta">View My Work</a>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <p>I specialize in front-end development and creating interactive web applications.</p>
-        </section>
-
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-              <div class="project-card">
-                <img src="assets\images\photo-1605379399642-870262d3d051.avif" alt="Project 1">
-                <h3>Project</h3>
-                <p>Price Comparing Web application</p>
-              </div>
-              <!-- <div class="project-card">
-                <img src="assets/images/project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-              </div> -->
-              <!-- <div class="project-card">
-                <img src="assets/images/project3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Description of Project 3.</p>
-              </div> -->
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Contact Me</h2>
-            <form>
-              <input type="text" placeholder="Your Name" required>
-              <input type="email" placeholder="Your Email" required>
-              <textarea placeholder="Your Message" required></textarea>
-              <button type="submit">Send Message</button>
-            </form>
-          </section>
-
-          <footer>
-            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-          </footer>
-
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-          <script src="scripts/script.js"></script>
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"> </script>
 </body>
 </html>

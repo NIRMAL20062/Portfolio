@@ -1,138 +1,99 @@
-/* Jai mahakal */
+/* styles.css */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #333333;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #f4f4f4;
+  overflow-x: hidden;
+}
+nav {
+  background: #ec6a6a;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav a {
+  color: rgb(19, 6, 6);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+nav a:hover {
+  color: #00d5ff;
+}
+section {
+  padding: 80px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project {
+  background: rgb(244, 109, 109);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.project:hover {
+  transform: scale(1.05);
+}
+.project img {
+  width: 100%;
+  border-radius: 10px;
   
-  header {
-    background: #4869bd;
-    color: #fff;
-     padding: 15px 30px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .hamburger .line {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    margin: 4px 0;
-  }
-  
-  .hero {
-    height: 100vh;
-    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-size: 64px;
-
-    margin-bottom: 1rem;
-  }
-  
-  .cta {
-    background: #618bff;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  
-  .about, .projects, .contact {
-    padding: 4rem 2rem;
-    text-align: center;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .project-card {
-    background: #f4f4f4;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-card img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-  }
-  
-  .social-links {
-    margin-top: 1rem;
-  }
-  
-  .social-links a {
-    color: #fff;
-    margin: 0 0.5rem;
-    font-size: 1.5rem;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      background: #333;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      text-align: center;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
-  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  max-width: 400px;
+  margin: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+input, textarea, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background: #ed5c5c;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #ffcc00;
+  color: #333;
+}
+footer {
+  background: #ec4e4e;
+  color: white;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin-top: 40px;
+}
